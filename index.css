@@ -19,12 +19,53 @@
     justify-content: center;
     align-items: center;
     gap: 40px;
-    margin-top: 20px;
+    margin: 100px 0px;
 }
 
 .pet-link {
     text-decoration: none;
     text-align: center;
     color: #000;
-    font-weight: bold;
+    font-weight: bold;    
+}
+
+
+.pet-icone img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 480px)
+{
+    .pet-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+        margin: 100px 0px;
+    }
+    
+    .pet-icone {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden; 
+    }
+
+}
+
+
+@media only screen and (min-width:480px) and (max-width:768px)
+{
+
+
+}
+
+
+@media only screen and (min-width:768px)
+{
+
+
 }
