@@ -3,11 +3,11 @@ var navHeader = document.getElementById('header-navbar');
 var content = document.getElementById('content');
 var showSidebar = false;
 
-function mostrarSidebar() {
+function alteraSidebar() {
     showSidebar = !showSidebar;
     console.log(showSidebar);
     if (showSidebar) {
-        navHeader.style.marginLeft = '-3vw';
+        navHeader.style.marginLeft = '-9vw';
         navHeader.style.animationName = 'showSiderbar';
         content.style.filter = 'blur(1px)';
     } else {
@@ -16,3 +16,19 @@ function mostrarSidebar() {
         content.style.filter = '';
     }
 }
+
+function fecharSidebar()
+{
+    if (showSidebar)
+    {
+        alteraSidebar();
+    }
+}
+
+window.addEventListener('resize', function(event) {
+    if(window.innerWidth > 768 && showSidebar) 
+    {  
+        showSidebar = true;
+        alteraSidebar();
+    }
+});

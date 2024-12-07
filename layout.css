@@ -22,31 +22,24 @@
 
 
 /*  Header  */
-    #qr-code{
-
-        width: 100px;
-        bottom: 0;
-        right: 0;
-        position: fixed;
-       
-    }
+@media only screen and (max-width: 576px) { 
    header .container {
         background-color: var(--cor1);
         box-shadow: 1px 1px 4px var(--cor4);
-        height: 100px;
+        height: 60px;
         width: 100%;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        padding: 0% 3%; 
+        padding: 0 30px; 
     }
 
     #header-navbar
     {    
         background-color: var(--cor1); /* Cor de fundo da navbar */
         height: 100%;
-        padding: 5%;
+        padding: 10px 30px;
         text-align: center;
         position: absolute;
         flex-direction: column;
@@ -58,13 +51,13 @@
 
     @keyframes mostrarSidebar {
         from { margin-left: -100vw;}
-        top{margin-left: -3vw;}
+        top{margin-left: -10vw;}
     }
 
     .header-navbar ul 
     {
         list-style: none; /* Remove bullets */
-        padding-top: 20px;
+        padding-top: 0px;
         gap: 50px; /* Espaço entre os itens */
     }
 
@@ -72,35 +65,137 @@
     {
         padding-top: 20px;
     }
-        
+
     .header-navbar ul li a 
     {
         text-decoration: none;
         font-weight: bold;
         font-size: 12px;
-        color: var(--cor-preto); /* Cor do texto */
+        color: #333; /* Cor do texto */
         text-transform: uppercase; /* Letras maiúsculas */
-
+        padding: 5px;
+        transition: color 0.3s ease;
     }
 
+    .header-navbar ul li a:hover 
+    {
+        color: var(--cor3); /* Cor ao passar o mouse */
+    }
+
+    .header-navbar ul li::after 
+    {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px; /* Posição da linha abaixo do texto */
+        height: 2px;
+        background-color: #000000; /* Cor da linha */
+        transform: scaleX(0.2); /* Inicia a linha encolhida */
+        transition: transform 0.3s ease; /* Animação suave */
+    }
+
+    .header-navbar ul li:hover::after 
+    {  background-color: #000000; /* Cor da linha */
+        transform: scaleX(1); /* Expande a linha quando o mouse passa */
+    }
+
+    .container figure img
+    { width: 100px; max-height: 30px;}
 
     button {
         background: transparent;
         border:none;
         color: var(--cor-preto);
+        cursor:pointer
     }
 
+   
 
-   /*
-   main{
-        transtion: 1s;
+    #qr-code{ display: none;}
+}
+
+    @media only screen and (min-width: 576px) { 
+    
+    header .container
+    {
+        background-color: var(--cor1);
+        box-shadow: 1px 1px 4px var(--cor4);
+        height: 100px;
+        
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0% 4%; 
     }
-    */
+    .container figure img
+    { width: 100px;}
 
-@media only screen and (min-width: 576px) 
-{
-    .btn-nav-header{
-        display: none;
+    .header-navbar 
+    {
+        background-color: #ece9e9; /* Cor de fundo da navbar */
+        padding: 15px 0;
+        text-align: center;
+        border: 2px solid #d9d9d9; /* Linha inferior da navbar */
+    }
+
+    .header-navbar ul 
+    {
+        list-style: none; /* Remove bullets */
+        display: flex;
+        justify-content: center; /* Centraliza os itens */
+        gap: 50px; /* Espaço entre os itens */
+    }
+
+    .header-navbar ul li 
+    {
+        position: relative;
+    }
+
+    .header-navbar ul li a 
+    {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 12px;
+        color: #333; /* Cor do texto */
+        text-transform: uppercase; /* Letras maiúsculas */
+        padding: 5px;
+        transition: color 0.3s ease;
+    }
+
+    .header-navbar ul li a:hover 
+    {
+        color: var(--cor3); /* Cor ao passar o mouse */
+    }
+
+    .header-navbar ul li::after 
+    {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px; /* Posição da linha abaixo do texto */
+        height: 2px;
+        background-color: #000000; /* Cor da linha */
+        transform: scaleX(0.2); /* Inicia a linha encolhida */
+        transition: transform 0.3s ease; /* Animação suave */
+    }
+
+    .header-navbar ul li:hover::after 
+    {  background-color: #000000; /* Cor da linha */
+        transform: scaleX(1); /* Expande a linha quando o mouse passa */
+    }
+
+    #qr-code{
+        
+        width: 100px;
+        bottom: 1vh;
+        right: 0;
+        position: fixed;
+       
     }
     
-}
+    .bnt-nav-header
+    { display: none;}
+    }
