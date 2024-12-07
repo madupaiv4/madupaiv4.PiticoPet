@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imagens/icon.ico">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="index.css">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 
     <title>Pitico Pet</title>
 </head>
@@ -18,11 +20,11 @@
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                   </svg>
             </button>
-
+        
             <figure>
                 <img src="imagens/logo.png"  alt="Logo pitico" id="logo-pitico">     
             </figure>
-
+        </div>
             <nav class="header-navbar" id="header-navbar">
 
                 <button onclick="alteraSidebar()" class="bnt-nav-header" id="bnt-nav-header">
@@ -35,53 +37,49 @@
 
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="servicos.html">Serviços</a></li>
+                   <li><a href="adocao.html">Adote Amor</a></li>
                     <li><a href="filiais.html">Lojas</a></li>
                     <li><a href="about.html">Sobre nós</a></li>
                 </ul>
 
             </nav>   
-        </div>
     </header>
 
 
     <main onclick="fecharSidebar()" id="content">
-        <figure class="">
-            <img src="width_800.png" id="Banner">
-           
-        </figure>
+        <figure class="Banner"><img src="imagens/width_800.png"></figure>
 
         <section class="pet-section">
             <a href="#">
                 <figure>
-                    <img src="figures/dog.png" alt="Cachorro">
+                    <img src="imagens/img-dog.jpg" alt="Cachorro">
                 </figure>
                 <p>Cachorro</p>
             </a>
             
             <a href="#" class="pet-link">
                 <figure>
-                    <img src="gato.jpg" alt="Cachorro">
-                </figure>
+                    <img src="imagens/img-gato.jpg" alt="Gato">
+                </figure>                
                 <p>Gato</p>
             </a>
             <a href="#" class="pet-link">
                 <figure>
-                    <img src="peixe.jpg" alt="Cachorro">
+                    <img src="imagens/img-peixe.png" alt="Peixe">
                 </figure>
                 <p>Peixe</p>
             </a>
 
             <a href="#" class="pet-link">
                 <figure>
-                    <img src="passaro.jpg" alt="Cachorro">
+                    <img src="imagens/img-periquito.jpg" alt="Pássaro">
                 </figure>
                 <p>Pássaro</p>
             </a>
 
             <a href="#" class="pet-link">
                 <figure>
-                    <img src="outros.jpg" alt="Roedores">
+                    <img src="imagens/img-rato.jpg" alt="Roedores">
                 </figure>
                 <p>Outros Pets</p>
             </a>
@@ -95,9 +93,8 @@
 
     </main>
 
-    <!--
+
     <footer>
-       <article>
          <section>
             <h3> saiba mais</h3>
             <ul>
@@ -125,10 +122,8 @@
                 <li>criadores</li>
             </ul>    
         </section>
-                
-       </article>
     </footer>
-    --->
+
     <script src="layout.js"></script>
     <script src="index.js"></script>
 </body>
