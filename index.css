@@ -3,6 +3,7 @@
     --cor1: #639379;
     --cor2: #426968;
     --cor3: #2d504c;
+    --cor-bg: #ece9e9;
     --cor-pretinho: #333; /* Preto Suave */
     --bg: #f8f9fa; /* Cinza Claro */
     --cartao-bg: #fff; /* Branco */
@@ -10,6 +11,9 @@
     --border-color: #ddd; /* Cinza Fraco */
     --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra Leve */
 }
+ h1, h2{
+ font-size: large;
+ }
 
 .Banner {
     /* background-color: #426968;  Cor de fundo da navbar */
@@ -95,17 +99,78 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
 }
-
-.green
-{
+.green {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin: 80px 0;
-    padding: 10px;
+    padding: 50px 10px;
     background-color: var(--cor1);
     border-radius: 10px;
+    
 }
 
-@media only screen and (max-width: 570px)
-{
+
+.carousel-container {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.green button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border:none;
+    color: var(--cor-branco);
+    width:  40px;
+    height: 40px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%; 
+    transition: background-color 0.3s ease 
+}
+
+.green button:hover {
+    background-color: var(--shadow-color);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .carousel-container {
+        max-width: 100%;
+    }
+}
+
+/* Responsividade para telas menores (celulares) */
+@media only screen and (max-width: 576px) {
+
     .Banner {
         /* background-color: #426968;  Cor de fundo da navbar */
         padding: 30px 0 0 0;
