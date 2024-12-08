@@ -1,32 +1,214 @@
-.Banner {
-    /* background-color: #426968;  Cor de fundo da navbar */
-    padding: 30px 0;
+
+:root {
+    /* Cores */
+    --cor1: #639379;
+    --cor2: #426968;
+    --cor3: #2d504c;
+    --cor4: rgb(167, 178, 184);
+    --cor-preto: #000;
+    --cor-branco: #fff;
+    --cor-bg: #ece9e9;
+    --cartao-bg: #fff;
+    --text-color: #555;
+    --border-color: #ddd;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+
+    /* Fontes */
+    --fonte-padrao: sans-serif;
+}
+
+/* Reset de margem e padding */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: var(--cor-bg);
+}
+
+/*  Header  */
+header .container {
+    background-color: var(--cor1);
+    box-shadow: 1px 1px 4px var(--cor4);
+    display: flex;
     align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.container figure {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.container figure img {
+    width: 75px;
+    margin-top: 5px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: var(--cor-preto);
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, button:active {
+    background-color: var(--shadow-color);
+    transform: scale(1.05);
+}
+
+/* Navbar no mobile */
+@media only screen and (max-width: 576px) { 
+    #header-navbar {
+        background-color: var(--cor1);
+        padding: 10px 30px;
+        text-align: center;
+        position: absolute;
+        top: 10px;
+        margin-left: -100vw;
+        z-index: 2;
+        flex-direction: column;
+    }
+
+    .header-navbar ul {
+        list-style: none;
+        padding-top: 0;
+        gap: 50px;
+    }
+
+    .header-navbar ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 12px;
+        color: #333;
+        text-transform: uppercase;
+        padding: 5px;
+        transition: color 0.3s ease, transform 0.2s ease;
+    }
+
+    .header-navbar ul li a:hover,
+    .header-navbar ul li a:active {
+        transform: scale(1.05);
+        color: var(--cor3);
+    }
+
+    .header-navbar ul li::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 2px;
+        background-color: #000;
+        transform: scaleX(0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .header-navbar ul li:hover::after {
+        transform: scaleX(1);
+    }
+
+    #qr-code {
+        display: none;
+    }
+}
+
+/* Navbar no desktop */
+@media only screen and (min-width: 576px) {
+    header .container {
+        height: 100px;
+        padding: 0 3%;
+    }
+
+    .container figure img {
+        width: 100px;
+    }
+
+    .header-navbar {
+        background-color: #ece9e9;
+        padding: 15px 0;
+        text-align: center;
+        border: 2px solid #d9d9d9;
+    }
+
+    .header-navbar ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    .header-navbar ul li a {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 12px;
+        color: #333;
+        text-transform: uppercase;
+        padding: 5px;
+        transition: color 0.3s ease;
+    }
+
+    .header-navbar ul li a:hover {
+        color: var(--cor3);
+    }
+
+    .header-navbar ul li::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -5px;
+        height: 2px;
+        background-color: #000;
+        transform: scaleX(0.2);
+        transition: transform 0.3s ease;
+    }
+
+    .header-navbar ul li:hover::after {
+        transform: scaleX(1);
+    }
+
+    #qr-code {
+        width: 100px;
+        bottom: 1vh;
+        right: 0;
+        position: fixed;
+    }
+
+    .bnt-nav-header {
+        display: none;
+    }
+}
+
+/* Banner */
+.Banner {
+    padding: 30px 0;
     width: 100%;
     height: 110%;
 }
 
-.Banner img 
-{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 40px
+.Banner img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: auto;
+    margin-bottom: 40px;
 }
 
-.pet-link {
-    margin-top: 5px;
-    font-size: 16px;}
-
-    .Banner > img 
-    {
-        width: 95%;
-        height: auto;
-        align-items: center;
-    }
-
+/* Seção de Pets */
 .pet-section {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -37,11 +219,8 @@
     text-decoration: none;
     text-align: center;
     color: #000;
-    font-weight: bold;   
-
-
+    font-weight: bold;
 }
-
 
 .pet-icone img {
     width: 100%;
@@ -50,43 +229,75 @@
     border-radius: 50%;
 }
 
-@media only screen and (max-width: 570px)
-{
-    .Banner {
-        /* background-color: #426968;  Cor de fundo da navbar */
-        padding: 30px 0 0 0;
-        align-items: center;
-        width: 100%;
-        height: 110%;
-    }
-    
-    .pet-link {
-    font-size: 12px;}
+.pet-icone {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    overflow: hidden;
+}
 
-    .Banner > img 
-    {
+/* Serviços */
+#Servicos {
+    text-align: center;
+    color: var(--cor3);
+    margin-bottom: 20px;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service {
+    background: var(--cartao-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    text-align: center;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.service h2 {
+    color: var(--cor1);
+    margin-bottom: 15px;
+}
+
+.service p {
+    color: var(--text-color);
+}
+
+.service:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+}
+
+.green {
+    margin: 80px 0;
+    padding: 10px;
+    background-color: var(--cor1);
+    border-radius: 10px;
+}
+
+/* Ajustes no mobile */
+@media only screen and (max-width: 570px) {
+    .Banner img {
         width: 90%;
-        height: auto;
-        align-items: center;
-        margin-bottom: 0px
-        
+        margin-bottom: 0;
     }
 
     .pet-section {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
         gap: 20px;
         margin: 50px 10px;
     }
+
     .pet-icone {
         width: 120px;
         height: 120px;
-        border-radius: 50%;
-        overflow: hidden; 
     }
 
+    .pet-link {
+        font-size: 12px;
+    }
 }
-
-
