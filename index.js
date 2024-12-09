@@ -1,5 +1,6 @@
 
 
+
 let index = 0;
 
 function moveSlide(step) {
@@ -16,3 +17,18 @@ function moveSlide(step) {
     const carousel = document.querySelector('.carousel');
     carousel.style.transform = `translateX(-${index * 100}%)`;
 }
+
+var bnt = document.getElementById('bnt-qrcode');
+
+bnt.addEventListener('click', () => {
+    console.log("oi");
+    Swal.fire({
+        title: "Aponte sua câmera!",
+        text: "Link do site :D",
+        imageUrl: "imagens/qr-code.jpg",
+        imageWidth: 200,
+        imageHeight: 200,
+        imageAlt: "QR-code image",
+        confirmButtonText: "Fechar",
+        })
+});

@@ -7,7 +7,7 @@ function alteraSidebar() {
     showSidebar = !showSidebar;
     console.log(showSidebar);
     if (showSidebar) {
-        navHeader.style.marginLeft = '-9vw';
+        navHeader.style.marginLeft = '-4vw';
         navHeader.style.animationName = 'showSidebar';
         content.style.filter = 'blur(1px)';
     } else {
@@ -28,20 +28,6 @@ window.addEventListener('resize', function(event) {
         showSidebar = false;
         alteraSidebar();
     }
-});
-
-const button = document.getElementById('bnt-qrcode');
-
-button.addEventListener('click', () => {
-    Swal.fire({
-        title: "Aponte sua câmera!",
-        text: "Link do site :D",
-        imageUrl: "imagens/qr-code.jpg",
-        imageWidth: 200,
-        imageHeight: 200,
-        imageAlt: "QR-code image",
-        confirmButtonText: "Fechar",
-        })
 });
 
 
