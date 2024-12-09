@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="imagens/icon.ico">
     <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="lojas.css">
     <title>Lojas</title>
 </head>
 <body>
@@ -16,7 +18,8 @@
             </button>
         
             <figure>
-                <a href="index.html"> <img src="imagens/logo.png"  alt="Logo pitico" id="logo-pitico">  </a>   
+                <a href="index.html">
+<img src="imagens/logo.png"  alt="Logo pitico" id="logo-pitico">     
             </figure>
         </div>
             <nav class="header-navbar" id="header-navbar">
@@ -38,9 +41,59 @@
 
             </nav>   
     </header>
+    <main onclick="fecharSidebar()" id="content">
+
+        <section class="store">
+            <h2>Unidade Santos</h2>
+            <p><strong>Endereço:</strong> Rua A, 123, Santos, SP</p>
+            <p><strong>Horário de Funcionamento:</strong> 08:00 - 20:00</p>
+            <p><strong>Telefone:</strong> (13) 1234-5678</p>
+            <p><strong>Serviços Disponíveis:</strong> Banho e Tosa, Clínica Veterinária</p>
+            <div class="rating" data-rating="4.5">
+                <span class="stars"></span>
+                <span class="reviews">4.5 (250 avaliações)</span>
+            </div>
+        </section>
+        
+        <section class="store">
+            <h2>Unidade São Vicente</h2>
+            <p><strong>Endereço:</strong> Rua B, 456, São Vicente, SP</p>
+            <p><strong>Horário de Funcionamento:</strong> 08:00 - 20:00</p>
+            <p><strong>Telefone:</strong> (13) 2345-6789</p>
+            <p><strong>Serviços Disponíveis:</strong> Banho e Tosa, Clínica Veterinária</p>
+            <div class="rating" data-rating="4.0">
+                <span class="stars"></span>
+                <span class="reviews">4.0 (150 avaliações)</span>
+            </div>
+        </section>
+        
+        <section class="store">
+            <h2>Unidade Praia Grande</h2>
+            <p><strong>Endereço:</strong> Rua C, 789, Praia Grande, SP</p>
+            <p><strong>Horário de Funcionamento:</strong> 08:00 - 20:00</p>
+            <p><strong>Telefone:</strong> (13) 3456-7890</p>
+            <p><strong>Serviços Disponíveis:</strong> Banho e Tosa, Clínica Veterinária</p>
+            <div class="rating" data-rating="4.8">
+                <span class="stars"></span>
+                <span class="reviews">4.8 (300 avaliações)</span>
+            </div>
+        </section>
+        
+        <section class="store">
+            <h2>Unidade São Paulo</h2>
+            <p><strong>Endereço:</strong> Rua D, 101, São Paulo, SP</p>
+            <p><strong>Horário de Funcionamento:</strong> 08:00 - 20:00</p>
+            <p><strong>Telefone:</strong> (11) 4567-8901</p>
+            <p><strong>Serviços Disponíveis:</strong> Banho e Tosa, Clínica Veterinária</p>
+            <div class="rating" data-rating="4.3">
+                <span class="stars"></span>
+                <span class="reviews">4.3 (200 avaliações)</span>
+            </div>
+        </section>
 
 
-    Lojas fisicas já inauguradas
+    </main>
     <script src="layout.js"></script>
+    <script src="lojas.js"></script>
     </body>
 </html>

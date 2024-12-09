@@ -49,7 +49,9 @@
 
     <main onclick="fecharSidebar()" id="content">
        
-        <figure class="Banner"><img src="imagens/width_800.png"><figure>
+        <figure class="Banner">
+            <a href="adocao.html"><img src="imagens/width_800.png"></a>
+        <figure>
 
         
         </section>
@@ -80,30 +82,86 @@
                 <div class="carousel-container">
                     <figure class="carousel">
                         <div class="carousel-item">
-                            <img src="imagens\dog-carrosel copy.jpg" alt="Cahorro">
-
+                            <img src="imagens/dog-carrosel copy.jpg" alt="Cachorro">
                         </div>
                         <div class="carousel-item">
-                            <img src="imagens\cat-carrosel.jpg" alt="Gato">
+                            <img src="imagens/cat-carrosel.jpg" alt="Gato">
                         </div>
                         <div class="carousel-item">
-                            <img src="imagens\periquito-carrosel.jpg" alt="Periquito">
-
+                            <img src="imagens/periquito-carrosel.jpg" alt="Periquito">
                         </div>
                         <div class="carousel-item">
-                            <img src="imagens\peixe-carrosel.jpg" alt="Peixe">
+                            <img src="imagens/peixe-carrosel.jpg" alt="Peixe">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="imagens\hamster-carrosel.jpg" alt="hamster">
                         </div>
                     </figure>
-                    <button class="prev" onclick="moveSlide(-1)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
-                        <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
-                      </svg></button>
-                    <button class="next" onclick="moveSlide(1)"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
-                        <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"/>
-                      </svg></button>
+                    <!-- Navegação do Carrossel -->
+                    <button class="prev" onclick="moveSlide(-1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-caret-left-fill" viewBox="0 0 16 16">
+                            <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z" />
+                        </svg>
+                    </button>
+                    <button class="next" onclick="moveSlide(1)">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="30" fill="currentColor" class="bi bi-caret-right-fill" viewBox="0 0 16 16">
+                            <path d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z" />
+                        </svg>
+                    </button>
                 </div>
             </article>
-            
-
+            <article class="curiosities">
+                <h2>Curiosidades sobre os Pets</h2>
+                <div class="curiosity-item">
+                    <h3>Cachorros</h3>
+                    <p>Sabia que os cachorros têm cerca de 300 milhões de receptores olfativos? Isso é muito mais que os 6 milhões dos humanos!</p>
+                    <h4>Cuidados:</h4>
+                    <ul>
+                        <li>Forneça uma alimentação balanceada e água fresca.</li>
+                        <li>Faça passeios diários para manter o cachorro saudável e ativo.</li>
+                        <li>Leve ao veterinário regularmente para exames e vacinas.</li>
+                    </ul>
+                </div>
+                <div class="curiosity-item">
+                    <h3>Gatos</h3>
+                    <p>Gatos conseguem girar suas orelhas 180 graus para ouvir sons ao seu redor com mais precisão.</p>
+                    <h4>Cuidados:</h4>
+                    <ul>
+                        <li>Forneça uma caixa de areia limpa e de fácil acesso.</li>
+                        <li>Ofereça brinquedos e espaço para se exercitar.</li>
+                        <li>Proporcione uma alimentação rica em proteínas de boa qualidade.</li>
+                    </ul>
+                </div>
+                <div class="curiosity-item">
+                    <h3>Periquitos</h3>
+                    <p>Periquitos podem aprender a imitar palavras e sons, tornando-os ótimos companheiros falantes.</p>
+                    <h4>Cuidados:</h4>
+                    <ul>
+                        <li>Proporcione uma gaiola espaçosa e com poleiros variados.</li>
+                        <li>Alimente com uma dieta balanceada de sementes e vegetais frescos.</li>
+                        <li>Ofereça banhos regulares para manter a plumagem saudável.</li>
+                    </ul>
+                </div>
+                <div class="curiosity-item">
+                    <h3>Peixes</h3>
+                    <p>Alguns peixes, como o betta, conseguem reconhecer seus donos pela visão!</p>
+                    <h4>Cuidados:</h4>
+                    <ul>
+                        <li>Garanta um aquário limpo com filtros adequados.</li>
+                        <li>Alimente com ração específica para a espécie e evite excessos.</li>
+                        <li>Monitore a temperatura da água para evitar estresse no peixe.</li>
+                    </ul>
+                </div>
+                <div class="curiosity-item">
+                    <h3>Hamsters</h3>
+                    <p>Hamsters têm bochechas elásticas que usam para armazenar comida temporariamente.</p>
+                    <h4>Cuidados:</h4>
+                    <ul>
+                        <li>Forneça uma gaiola com rodinhas e brinquedos para exercício.</li>
+                        <li>Mantenha uma dieta saudável com ração para roedores e frutas frescas.</li>
+                        <li>Evite ter mais de um hamster na mesma gaiola, pois eles podem brigar.</li>
+                    </ul>
+                </div>
     </main>
 
 
@@ -123,7 +181,7 @@
             <ul>
                 <li>pitico.pet@outlook.com</li>
                 <li>(13) 97806-1324</li>
-                <li><a href="#">insta</a></li>
+                <li><a href="#">instagram</a></li>
                 <li><a href="#">X</a></li>
             </ul>    
         </section>

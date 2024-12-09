@@ -14,10 +14,10 @@
         --cor-branco:#ffffff;
         --shadow-color: rgba(0, 0, 0, 0.1); /* Sombra Leve */
 
-        --fonte-padrao: sans-serif;
+        --fonte-padrao: "Roboto", sans-serif;;
     }
     body {
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: var(--fonte-padrao);
         background-color: var(--cor-bg); 
         margin: 0;
         padding: 0;

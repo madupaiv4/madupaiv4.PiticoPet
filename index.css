@@ -4,6 +4,7 @@
     --cor2: #426968;
     --cor3: #2d504c;
     --cor-bg: #ece9e9;
+    --cor-branco:#ffffff;
     --cor-pretinho: #333; /* Preto Suave */
     --bg: #f8f9fa; /* Cinza Claro */
     --cartao-bg: #fff; /* Branco */
@@ -14,6 +15,7 @@
  h1, h2{
  font-size: large;
  }
+ 
 
 .Banner {
     /* background-color: #426968;  Cor de fundo da navbar */
@@ -72,7 +74,7 @@
 #Servicos {
     text-align: center;
     color: var(--cor3);
-    margin-bottom: 20px;
+    margin: 20px 0;
 }
 .services {
     display: grid;
@@ -103,18 +105,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin: 80px 0;
     padding: 50px 10px;
     background-color: var(--cor1);
     border-radius: 10px;
-    
 }
 
+.green h2{
+    color: var(--cor-branco);
+    font-size: 1.5em;
+    margin: 40px 0;
+}
 
 .carousel-container {
     position: relative;
-    width: 80%;
-    max-width: 600px;
+    width: 90%;
+    max-width: 800px;
     margin: auto;
     overflow: hidden;
 }
@@ -126,13 +133,12 @@
 
 .carousel-item {
     min-width: 100%;
-    overflow: hidden;
 }
 
 .carousel-item img {
     width: 100%;
     height: auto;
-    display: block;
+    border-radius: 15px;
 }
 
 .green button {
@@ -140,18 +146,16 @@
     top: 50%;
     transform: translateY(-50%);
     background: transparent;
-    border:none;
+    border: none;
     color: var(--cor-branco);
-    width:  40px;
-    height: 40px;
     cursor: pointer;
     z-index: 10;
-    border-radius: 50%; 
-    transition: background-color 0.3s ease 
+    transition: background-color 0.3s ease;
 }
 
 .green button:hover {
     background-color: var(--shadow-color);
+    border-radius: 50%;
 }
 
 .prev {
@@ -161,6 +165,55 @@
 .next {
     right: 10px;
 }
+
+
+.curiosities {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.curiosities h2 {
+    text-align: center;
+    color: var(--cor3);
+    margin-bottom: 20px;
+    font-size: 1.6em;
+}
+
+.curiosity-item {
+    margin-bottom: 40px;
+}
+
+.curiosity-item h3 {
+    color: var(--cor-pretinho);
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.curiosity-item h4 {
+    color: var(--cor3);
+    font-size: 1.2em;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.curiosity-item p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.curiosity-item ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.curiosity-item ul li {
+    margin-bottom: 10px;
+}
+
 
 @media (max-width: 768px) {
     .carousel-container {
@@ -207,5 +260,57 @@
     }
 
 }
+
+
+footer {
+    background-color: var(--cor1);
+    color: var(--cor-branco);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+footer section {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 20px;
+}
+
+footer h3 {
+    border-bottom: 2px solid var(--cor-branco);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--cor1);
+}
+
+@media (max-width: 576px) {
+    footer {
+        text-align: center;
+    }
+    footer section {
+        padding: 10px;
+    }
+}
+
 
 
