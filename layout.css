@@ -229,3 +229,55 @@
    .bnt-nav-header
     { display: none;}
     }
+
+    
+footer {
+    background-color: var(--cor1);
+    color: var(--cor-branco);
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: left;
+}
+
+footer section {
+    flex: 1;
+    min-width: 200px;
+    padding: 0 20px;
+}
+
+footer h3 {
+    border-bottom: 2px solid var(--cor-branco);
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: var(--cor-branco);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: var(--cor1);
+}
+
+@media (max-width: 576px) {
+    footer {
+        text-align: center;
+    }
+    footer section {
+        padding: 10px;
+    }
+}
+
