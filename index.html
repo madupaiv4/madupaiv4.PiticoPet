@@ -6,8 +6,9 @@
     <link rel="icon" type="image/x-icon" href="imagens/icon.ico">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
 
 
     <title>Pitico Pet</title>
@@ -15,7 +16,9 @@
 <body>
     <header>
         <div class="container">
-            <button onclick="alteraSidebar()" class="bnt-nav-header" id="bnt-header">
+           
+              
+            <button class="bnt-nav-header">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                     <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
                   </svg>
@@ -23,8 +26,10 @@
         
             <figure>
                 <a href="index.html">
-<img src="imagens/logo.png"  alt="Logo pitico" id="logo-pitico">     
+            <img src="imagens/logo.png"  alt="Logo pitico" id="logo-pitico">     
             </figure>
+
+        
         </div>
             <nav class="header-navbar" id="header-navbar">
 
@@ -59,20 +64,28 @@
            
             <div class="services">
                 <div class="service">
+                    <a href="https://api.whatsapp.com/message/ESHOZSRYIW45I1?autoload=1&app_absent=0">
                     <h2>Banho e Tosa</h2>
                     <p>Mantenha seu pet limpo e bem cuidado com nossos serviços de banho e tosa.</p>
+                    </a>
                 </div>
                 <div class="service">
+                    <a href="https://veterinariacaicara.com.br/?gad_source=1&gclid=Cj0KCQiApNW6BhD5ARIsACmEbkWWxAP8EwyJ6-pYHzBbO_ewJ7QVckSkB6xHdhbEePAq-UllOCp0YJUaAtlbEALw_wcB">
                     <h2>Consultas Veterinárias</h2>
                     <p>Cuide da saúde do seu pet com nossas consultas veterinárias especializadas.</p>
+                    </a>
                 </div>
                 <div class="service">
+                    <a>
                     <h2>Hotel para Pets</h2>
                     <p>Viaje tranquilo sabendo que seu pet está sendo bem cuidado em nosso hotel para pets.</p>
+                    </a>
                 </div>
                 <div class="service">
+                    <a href="https://www.cronoshare.com.br/servicos/adestrador-de-cachorro/sao-paulo/praia-grande">
                     <h2>Adestramento</h2>
                     <p>Treinamento para ajudar seu pet a se comportar melhor.</p>
+                    </a>
                 </div>
             </div>
         
@@ -190,14 +203,23 @@
         <section>
             <h3>Pitico pet</h3>
             <ul>
-                <li>criadores:</li>
+                <li>DESENVOLVEDORES:</li>
                 <li>Felipe Costa  dos Santos Menezes</li>
                 <li>Maria Eduarda de Paiva Souza</li>
+                <li><button onclick="abrirQrcode" id="bnt-qrcode"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-qr-code" viewBox="0 0 16 16">
+                    <path d="M2 2h2v2H2z"/>
+                    <path d="M6 0v6H0V0zM5 1H1v4h4zM4 12H2v2h2z"/>
+                    <path d="M6 10v6H0v-6zm-5 1v4h4v-4zm11-9h2v2h-2z"/>
+                    <path d="M10 0v6h6V0zm5 1v4h-4V1zM8 1V0h1v2H8v2H7V1zm0 5V4h1v2zM6 8V7h1V6h1v2h1V7h5v1h-4v1H7V8zm0 0v1H2V8H1v1H0V7h3v1zm10 1h-1V7h1zm-1 0h-1v2h2v-1h-1zm-4 0h2v1h-1v1h-1zm2 3v-1h-1v1h-1v1H9v1h3v-2zm0 0h3v1h-2v1h-1zm-4-1v1h1v-2H7v1z"/>
+                    <path d="M7 12h1v3h4v1H7zm9 2v2h-3v-1h2v-1z"/>
+                  </svg></button>
+                <li>
             </ul>    
         </section>
     </footer>
 
     <script src="layout.js"></script>
     <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 </html>

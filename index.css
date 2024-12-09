@@ -259,6 +259,7 @@
         overflow: hidden; 
     }
 
+    
 }
 
 
@@ -312,5 +313,7 @@ footer a:hover {
     }
 }
 
-
+.service a{
+    text-decoration: none;
+}
 

@@ -225,7 +225,22 @@
         position: fixed;
        
     }
+
     
+    #bnt-qrcode{
+        background: transparent;
+        border:none;
+        color: var(--cor-branco);
+        cursor:pointer;
+        width:  40px;
+        height: 40px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+        border-radius: 50%;
+    }
+    #bnt-qrcode:hover, #bnt-qrcode:active {
+        background-color: var(--shadow-color);
+        transform: scale(1.05); /* Efeito de leve crescimento */
+    }
    .bnt-nav-header
     { display: none;}
     }
@@ -279,5 +294,11 @@ footer a:hover {
     footer section {
         padding: 10px;
     }
+
+    #bnt-qrcode{
+        display:none;
+    }
+
+     
 }
 
